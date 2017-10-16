@@ -1,6 +1,6 @@
 # cmdobfuscator
 
-This project was developed in order to test potential bypasses of EDR solutions using native windows cmd line bypassing techniques. The aim was to understand the scope available and develop a quick poc to see if it was able to bypass and defensive solutions which apply machine-learning/signaute analysis to cmd line arguments. 
+This project was developed in order to test potential bypasses of EDR solutions using native windows cmd line bypassing techniques. The aim was to understand the scope available and develop a quick poc to see if it was able to bypass and defensive solutions which apply machine-learning/signature analysis to cmd line arguments. 
 
 
 Example usage:
@@ -36,3 +36,6 @@ NB: Windows parsing of cmd line arguments is a bit inconsistent and different pr
 Thoughts for additional changes:
 -parse ip's and change them into hex representation for people watching for ping -n 1 x.x.x.x' with reg ex
 -chain common programs to together first to attempt to bypass ML style token techniques.
+
+
+NBB. I also wrote this in ruby because I wanted to learn it so the code will be horrific to rubyists :p
