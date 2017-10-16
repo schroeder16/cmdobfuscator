@@ -80,8 +80,11 @@ Final obfuscated output: r""""""""""""""""""""""""""""""""""""""""""""""""""""""
 NB: Windows parsing of cmd line arguments is a bit inconsistent and different programs parse certain characters (i.e. ") differently. As a result this poc aims to focus on applying a technique which worked for the majority of cases. This will still break some things though, for example the parsing method used for first argument will not work with 'dir'. Registry keys may also break.
 
 Thoughts for additional changes:
--parse ip's and change them into hex representation for people watching for ping -n 1 x.x.x.x' with reg ex
--chain common programs to together first to attempt to bypass ML style token techniques.
+* parse ip's and change them into hex representation for people watching for ping -n 1 x.x.x.x' with reg ex
+* chain common programs to together first to attempt to bypass ML style token techniques.
+* Bypass windows ETW as it has a char limit when parsing cmd line args.
+
+Lastly, this was designed as a test for automated detection - if a human see's it - it will clearly be anonamous, although that never stopped anyone using encoded powershell :)
 
 
 NBB. I also wrote this in ruby because I wanted to learn it so the code will be horrific to rubyists :p
